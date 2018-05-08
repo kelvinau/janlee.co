@@ -17,6 +17,7 @@
 
 		gtag('config', 'UA-117998010-2');
 	</script>
+	<meta name="msvalidate.01" content="2FB010060FAACEF25E73731948401DC2" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
