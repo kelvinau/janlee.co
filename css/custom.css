@@ -1,4 +1,3 @@
-body, textarea, #respond textarea, .widget input[type="text"], .widget input[type="email"], .widget input[type="date"], .widget input[type="number"], .wpcf7 textarea, .mc4wp-form input, #respond input, .wpcf7 input, #searchform input.search-input, ul.homepage-featured-boxes .penci-fea-in h4, .widget.widget_categories ul li span.category-item-count, .about-widget .about-me-heading, .widget ul.side-newsfeed li .side-item .side-item-text .side-item-meta {
-  font-family: 'Playfair Display', serif !important; }
-
-/*# sourceMappingURL=custom.css.map */
+body.home article.post p.post-nav-links {
+	display: none;
+}

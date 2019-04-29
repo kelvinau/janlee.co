@@ -6,7 +6,6 @@ function child_enqueue() {
     global $PARENT_DIR, $CHILD_DIR;
     $parent_style = 'parent-style';
     wp_enqueue_style( $parent_style , "{$PARENT_DIR}/style.css" );
-    wp_enqueue_style( 'google-style', "https://fonts.googleapis.com/css?family=Playfair+Display" , array( $parent_style ));
     wp_enqueue_style( 'child-style', "{$CHILD_DIR}/css/custom.css" , array( $parent_style ));
 }
 add_action( 'wp_enqueue_scripts', 'child_enqueue', 999 );
