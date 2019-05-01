@@ -208,7 +208,7 @@ if ( is_active_sidebar( 'footer-signup-form' ) ): ?>
         <div id="footer-copyright">
           <p>
             @<?= date("Y") ?> - janlee.co. All Right Reserved. Designed and Developed by 
-            <a href="http://kelvinau.net" target="_blank">Kelvin Au</a>
+            <a href="https://www.linkedin.com/in/kelvinau321" target="_blank">Kelvin Au</a>
           </p>
         </div>
 
