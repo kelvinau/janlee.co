@@ -1,2 +1,2 @@
 # janlee.co
-Source Code of JanLee.co - http://JanLee.co
+Source Code of JanLee.co - https://JanLee.co
