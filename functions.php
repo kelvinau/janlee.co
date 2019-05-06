@@ -20,3 +20,30 @@ function cyb_add_last_modified_header($headers) {
     }
 }
 add_action('template_redirect', 'cyb_add_last_modified_header');
+
+$ASYNC_DEFER_JS = [
+    'async' => [
+        //'child-script' => true,
+    ],
+    'defer' => [
+        'jquery-core' => true,
+        'jquery-migrate' => true,
+        'penci-libs-js' => true,
+        'main-scripts' => true,
+        'penci_ajax_more_posts' => true,
+        'jquery-pllexi-slider' => true,
+        'wordfenceAJAXjs' => true,
+    ],
+];
+
+function add_async_defer_attr($tag, $handle) {
+    global $ASYNC_DEFER_JS;
+    if (array_key_exists($handle, $ASYNC_DEFER_JS['async'])) {
+        $tag = str_replace(' src', ' async src', $tag);
+    }
+    if (array_key_exists($handle, $ASYNC_DEFER_JS['defer'])) {
+        $tag = str_replace(' src', ' defer src', $tag);
+    }
+    return $tag;
+}
+add_filter('script_loader_tag', 'add_async_defer_attr', 10, 2);
