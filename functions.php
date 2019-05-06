@@ -36,6 +36,7 @@ $ASYNC_DEFER_JS = [
 				'penci_ajax_more_posts' => true,
 				'jquery-pllexi-slider' => true,
 				'wordfenceAJAXjs' => true,
+				'autoptimize-toolbar' => true,
     ],
 ];
 
