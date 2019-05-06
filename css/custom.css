@@ -7,3 +7,13 @@ body.home article.post p.post-nav-links {
 .akismet_comment_form_privacy_notice {
   display: none;
 }
+body.penci-body-boxed {
+  background-image: none !important;
+  position: relative;
+}
+img.background-cover {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
