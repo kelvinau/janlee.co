@@ -28,11 +28,15 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">  
+  <meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php // for caching image and using webp with matched style from custom.css ?>
+<img class="background-cover" src="<?php echo get_theme_mod( 'penci_body_boxed_bg_image' ); ?>">
+
 <?php
 if( get_theme_mod( 'penci_custom_code_after_body_tag' ) ):
 	echo do_shortcode( get_theme_mod( 'penci_custom_code_after_body_tag' ) );
@@ -67,7 +71,7 @@ if( $header_layout == 'header-9' ) {
 	$header_class = 'header-6 header-9';
 }
 ?>
-<?php 
+<?php
 if ( get_theme_mod( 'penci_vertical_nav_show' ) ) {
 	get_template_part( 'template-parts/menu-hamburger' );
 }
@@ -124,7 +128,7 @@ if ( get_theme_mod( 'penci_vertical_nav_show' ) ) {
 	<?php if( get_theme_mod( 'penci_top_bar_show' ) ): ?>
 		<?php get_template_part( 'inc/modules/topbar' ); ?>
 	<?php endif; ?>
-	
+
 	<?php if ( in_array( $header_layout, array( 'header-1', 'header-4', 'header-7' ) ) && ! get_theme_mod( 'penci_vertical_nav_show' ) ) : ?>
 	<!-- Navigation -->
 	<nav id="navigation" class="header-layout-top <?php echo esc_attr( $menu_style . ' ' . $header_class ); ?><?php if( get_theme_mod( 'penci_header_enable_padding' ) ): echo ' menu-item-padding'; endif; ?><?php if( get_theme_mod( 'penci_disable_sticky_header' ) ): echo ' penci-disable-sticky-nav'; endif; /* Check for disable sticky header */ ?>" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
@@ -452,7 +456,7 @@ if ( get_theme_mod( 'penci_vertical_nav_show' ) ) {
 	 * @since 2.0
 	 */
 	if( ( ( is_home() || is_front_page() ) && get_theme_mod( 'penci_signup_display_homepage' ) ) || ! get_theme_mod( 'penci_signup_display_homepage' ) ):
-		if ( is_active_sidebar( 'header-signup-form' ) && get_theme_mod( 'penci_move_signup_below' ) ):	
+		if ( is_active_sidebar( 'header-signup-form' ) && get_theme_mod( 'penci_move_signup_below' ) ):
 			if( ! get_theme_mod( 'penci_move_signup_full_width' ) ){
 		?>
 			<div class="container penci-header-signup-form penci-header-signup-form-below">
