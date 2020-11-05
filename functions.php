@@ -29,8 +29,8 @@ $ASYNC_DEFER_JS = [
         //'child-script' => true,
     ],
     'defer' => [
-        'jquery-core' => true,
-        'jquery-migrate' => true,
+        //'jquery-core' => true,
+        //'jquery-migrate' => true,
         'penci-libs-js' => true,
         'main-scripts' => true,
 				'penci_ajax_more_posts' => true,
